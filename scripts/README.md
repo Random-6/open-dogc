@@ -19,7 +19,7 @@ In order to get to the advanced search, we need to open a browser using selenium
 On the advanced search, we need to find the "searcher" using it's id (*textWorkds*) and introduce our search (for example: Artur Mas). once this is done, we need to click on the searcg button (*cercaAv1*).
 Once the search is done, the advanced search will look something similar to the image below:
 
-![data1](img/data1.png)
+![data1](../img/data1.png)
 
 ### 1.2 Get documents and store them
 
@@ -31,11 +31,11 @@ This *Docs List* is what we want to iterate over.
 To do so, we get the whole list of results by obtaining the *main_content* table information. Once we have it, we can iterate over each document.
 DOGC documents are published in both html and pdf format. In our project, the automatic scraping process was performed using the html files, as they provide easier access to information and also add specific summaries for each document.
 
-![data2](img/data2.png)
+![data2](../img/data2.png)
 
 For each document, we will get all the text but also the metadata that can be found on the left side of the document page. With this information, we can create a dataframe (from pandas) filled with all needed information: area, search, date, identificatior, issuing agency, text, document type, title and url.
 
-![data3](img/data3.png)
+![data3](../img/data3.png)
 
 
 In order to gather better understanding of the information provided by the DOGC documents, we did two kinds of search. Concretely:
