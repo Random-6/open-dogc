@@ -52,3 +52,63 @@ These documents were ranked by relevancy prior to their download.
 ### 1.3 Output
 
 The result of this first step is a mongoDB that contains all the scrapped information. For each document there is a row indexed by the author and the date, with a column for the whole text and columns with the metadata explained before.
+
+
+## 2. Data processing and cluster using LDA 👥
+
+The data analysis of this project is based on the clusterisation of all documents using an unsupervised machine learning model.
+Clustering all documents will put together those ones that discuss about similar topics or are defined in a similar way. Once we have the clusters, we can then perform some studies about the participation of each party in each cluster and how they relate.
+
+The script for the clusterization can be found in the 2. Model folder. This script is divided into two main steps:
+
+- Preprocessing: clean the scrapped documents and transform them into a matrix that can be used for the cluster model.
+- Cluster model and classification: this is done using LDA (Latent Dirichlet Allocation) with a total of 5 topics.
+
+### 2.1 Preprocessing
+
+The documents need to be cleaned before they can be used as input for the cluster model.
+This processing has the following steps:
+
+- Import data (.csv)
+
+Data is imported form csv (but it could have also been imported from the mongoDB).
+
+- Translate to english
+
+The main DOGC language is Catalan. Catalan is a difficult language to apply cleaning packages of text in python as less text processing tools are available. To solve this problem, we translated all documents to English in order to apply the cleaning techniques available in python. Translation was performed using textblob (http://textblob.readthedocs.org/).
+
+- Word processing
+
+This step consist in tokenitzation (split text into single words), remove punctuation marks and reduce words to root (lemmatize).
+
+The python packages to apply these points were numpy, pandas, nltk, string and textblob.
+
+- Build our dictionary
+
+This step consist in building a dictionary with all the available words found in all the scrapped text. This dictionary will then be used to build the matrix for the LDA model.
+
+- Build the MxN matrix
+
+Once we have the dictionary, we can then convert all text into vector. These vector will containing the times each word of the dictionary appears in the text.
+The matrix will have size MxN, being M the number of documents and N the length of the dictionary.
+Once this is done, the matrix will be normalized.
+
+
+### 2.2 LDA Model
+
+Once the text inside each document is cleaned, we applied a topic model to obtain a categorization of documents based in the most frequent words present in them. The topic model used was LDA (Latent Dirichlet Allocation) for python.
+
+LDA is a hierarchical Bayesian model that allows us to create topics from different texts based in the top words present within the texts.
+The LDA is a supervised algorithm so we had to establish the number of topics and the number of important words for the classification. After a manual supervision of the results, the final LDA model was created with 5 topics and 10 top words.
+
+Concretely, the 5 topics were classified as:
+
+| Topic 	| Description 	|
+|:----:	|:-------:	|
+|   Topic 0   	|  Environment and territory        	|
+|   Topic 1   	|  Health       	|
+|   Topic 2  	|  Employment and Welfare (Social Security)       	|
+|   Topic 3  	|  Legal matters      	|
+|   Topic 4  	|   Media and audiovisual      	|
+
+However, now a question arises: Are these words really useful for topic classification?
