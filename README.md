@@ -1,6 +1,6 @@
 # OPEN-DOGC
 
-![dogc_website](img/dogc_website.png)
+![dogc_website](img/dogc_website.jpg)
 
 What do we know about our politicians? Do we have enough information about what decisions they make? Are journals really telling us everything that should be important?
 
