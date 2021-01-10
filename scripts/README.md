@@ -69,25 +69,25 @@ The script for the clusterization can be found in the 2. Model folder. This scri
 The documents need to be cleaned before they can be used as input for the cluster model.
 This processing has the following steps:
 
-- Import data (.csv)
+- **Import data (.csv)**
 
 Data is imported form csv (but it could have also been imported from the mongoDB).
 
-- Translate to english
+- **Translate to english**
 
 The main DOGC language is Catalan. Catalan is a difficult language to apply cleaning packages of text in python as less text processing tools are available. To solve this problem, we translated all documents to English in order to apply the cleaning techniques available in python. Translation was performed using textblob (http://textblob.readthedocs.org/).
 
-- Word processing
+- **Word processing**
 
 This step consist in tokenitzation (split text into single words), remove punctuation marks and reduce words to root (lemmatize).
 
 The python packages to apply these points were numpy, pandas, nltk, string and textblob.
 
-- Build our dictionary
+- **Build our dictionary**
 
 This step consist in building a dictionary with all the available words found in all the scrapped text. This dictionary will then be used to build the matrix for the LDA model.
 
-- Build the MxN matrix
+- **Build the MxN matrix**
 
 Once we have the dictionary, we can then convert all text into vector. These vector will containing the times each word of the dictionary appears in the text.
 The matrix will have size MxN, being M the number of documents and N the length of the dictionary.
