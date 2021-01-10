@@ -1,5 +1,7 @@
 # OPEN-DOGC
 
+![dogc_website](img/dogc_website.png)
+
 What do we know about our politicians? Do we have enough information about what decisions they make? Are journals really telling us everything that should be important?
 
 What if we could analyze the information from official documents in a more efficient way without even need to read what’s inside?
