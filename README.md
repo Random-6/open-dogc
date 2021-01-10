@@ -1,4 +1,4 @@
-# open-dogc
+# OPEN-DOGC
 
 What do we know about our politicians? Do we have enough information about what decisions they make? Are journals really telling us everything that should be important?
 
@@ -10,12 +10,12 @@ The dogc website is where all official documents from the Catalan government of 
 
 The project is one of the capstone project of the course Data Science and [Big Data from the Universitat de Barcelona](https://www.ub.edu/web/ub/es/estudis/oferta_formativa/masters_propis/fitxa/I/201911632/index.html).
 
-### 😻 Authors
+## Authors 😻
 
 - Alex Abos
 - Xisca Pericàs
 
-### ✅ Tags
+## Tools 🔨
 
 This project was done using the following tools:
 
@@ -24,3 +24,7 @@ This project was done using the following tools:
 |   python   	|  main language for development        	|
 |   mongoDB   	|  database framework        	|
 |   D3.js   	|  main visualizations        	|
+
+----
+
+February 2016
