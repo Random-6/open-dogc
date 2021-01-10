@@ -11,12 +11,14 @@ The script that can be found inside the scrapping folder, it is splitted into tw
 1. Browser into the opengov.cat webpage and navigate up to the advanced search.
 2. Iterate upon a list of people (politicians) to get all their available documents.
 
-The browser navigation is performed using Selenium, while the database used to store the scrapped information is MongoDB.
+The browser navigation is performed using **Selenium**, while the database used to store the scrapped information is **MongoDB**.
 
 ### 1.1 Advanced Search
 
 In order to get to the advanced search, we need to open a browser using selenium and go to the http://dogc.gencat.cat/ca/ url. Once there, we need to look for the "advanced search" button and click on it.
+
 On the advanced search, we need to find the "searcher" using it's id (*textWorkds*) and introduce our search (for example: Artur Mas). once this is done, we need to click on the searcg button (*cercaAv1*).
+
 Once the search is done, the advanced search will look something similar to the image below:
 
 ![data1](../img/data1.png)
@@ -28,7 +30,9 @@ Once we manage to get to results page, we have two types of information:
 - Docs list: it gives us the whole list of documents.
 
 This *Docs List* is what we want to iterate over.
+
 To do so, we get the whole list of results by obtaining the *main_content* table information. Once we have it, we can iterate over each document.
+
 DOGC documents are published in both html and pdf format. In our project, the automatic scraping process was performed using the html files, as they provide easier access to information and also add specific summaries for each document.
 
 ![data2](../img/data2.png)
