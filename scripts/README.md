@@ -130,4 +130,37 @@ The results show an accuracy above 0.9 for both models on the test set, being th
 
 This new model can now be applied to new scrapped text and allow us to do some studies relating content, politicians, parties and topics.
 
-## 3. Analysis and visualisation
+## 3. Analysis and visualization 🔆
+
+Finally, we present some graphs using html and D3.js that allow us to explore the gathered data.
+
+- *Graph 1*: Number of documents per topic and year
+
+This graphs shows a bar plot on the left side and a pie chart on the right side. For each topic we have the count of scrapped documents per publication year.
+
+It can be seen that Topic-0 (Environment and Territory) had a big impact on 2011 as 75% of all documents for that year belong to this topic. However, this changed thorugh the years ending up with a higher parity between topics: Topic 0 decreased from 75% to 25% in 2015, while Topic-4 (Media and audiovisual increased from 7% to 30%.
+
+2. *Graph 2*: Distribution of documents by topic and institution
+
+This radar chart shows us the percentage of documents that were issued it by each institution given each topic.
+
+With this graph we can corroborate the results of the cluster as mainly all topics are heavily related with its most related institution. For example, 50% of all document from "Medi Ambient i Territori" belong to the "Departament Agricultura, Ramaderia, Pesca, Alimentació i Medi Natural", which is, in fact, obvious.
+
+3. *Graph 3*: Documents by type mentioning a politician from each party.
+
+With this bar chart, we can see how many document of each type (i.e: acord, decret, etc.) talk about a politician that belongs to an specific party.
+It can be seen, for example, that PSC has a higher influence among "Decret" hile CIU hat a greater impact on "Edicte".
+
+Finally we have done a fast visualization using a Sankey diagram that relates each politician with each topic. The links show how much each politician is appearing in documents from each topic.
+
+![persona_topics](../img/persona_topics.png)
+
+## 4. Conclusions❗
+
+As a short conclusion, this is an small project that aims to show how public information gan be easily gathered from the Open Data portals and used to get meaning knowledge.
+
+In this case, it has been done a simple scrapping to get and process documents from the Open-Dogc (Catalunya Open Documents Portal) and then some advanced analytics hs been applied to extract knowledge.
+
+The analytics have been focused on characterize the text using a text-analysis and creating clusters that allows us to see tome patterns (some topics). Once this is done, we can correlate the internal information of the documents (for example politicians or parties) with each topic and extract ideas and theories.
+
+This project was done on February 2016 and, therefore, it has many potential improvements that could be done in order to improve both performance and results.

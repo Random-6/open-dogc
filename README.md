@@ -25,8 +25,8 @@ This project was done using the following tools:
 |:----:	|:-------:	|
 |   python   	|  main language for development        	|
 |   mongoDB   	|  database framework        	|
-|   D3.js   	|  main visualizations        	|
+|   html + D3.js   	|  main visualizations        	|
 
 ----
 
-February 2016
+**Note** that this project was done on February 2016, therefore some packages used may no longer exist or may be deprecated.

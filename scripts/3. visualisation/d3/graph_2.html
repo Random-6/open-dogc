@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+  <title>Radar chart</title>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+	<script src="radarChart.js"></script>
+	
+	<style>
+		body {
+		  overflow: hidden;
+		  margin: 0;
+		  font-size: 14px;
+		  font-family: "Helvetica Neue", Helvetica;
+		}
+		h3{
+    font-size: 24px;
+    margin: 10px 0;
+    font-weight: 700;
+    color: #222222;
+    font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
+    letter-spacing: -1px;
+}
+
+		#chart {
+		  position: absolute;
+		  top: 50px;
+		  left: 100px;
+		}	
+	</style>
+  </head>
+  <body>
+    <div id="body">
+    	<h3>Distribution of documents by topic and institution issuing it</h3>
+	  <div id="chart"></div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
