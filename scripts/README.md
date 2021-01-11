@@ -134,22 +134,28 @@ This new model can now be applied to new scrapped text and allow us to do some s
 
 Finally, we present some graphs using html and D3.js that allow us to explore the gathered data.
 
-- *Graph 1*: Number of documents per topic and year
+*Note*: if you want to check the html graph, just download them and enjoy :)
+
+
+- **Graph 1**: Number of documents per topic and year
 
 This graphs shows a bar plot on the left side and a pie chart on the right side. For each topic we have the count of scrapped documents per publication year.
 
 It can be seen that Topic-0 (Environment and Territory) had a big impact on 2011 as 75% of all documents for that year belong to this topic. However, this changed thorugh the years ending up with a higher parity between topics: Topic 0 decreased from 75% to 25% in 2015, while Topic-4 (Media and audiovisual increased from 7% to 30%.
 
-2. *Graph 2*: Distribution of documents by topic and institution
+2. **Graph 2**: Distribution of documents by topic and institution
 
 This radar chart shows us the percentage of documents that were issued it by each institution given each topic.
 
 With this graph we can corroborate the results of the cluster as mainly all topics are heavily related with its most related institution. For example, 50% of all document from "Medi Ambient i Territori" belong to the "Departament Agricultura, Ramaderia, Pesca, Alimentació i Medi Natural", which is, in fact, obvious.
 
-3. *Graph 3*: Documents by type mentioning a politician from each party.
+3. **Graph 3**: Documents by type mentioning a politician from each party.
 
 With this bar chart, we can see how many document of each type (i.e: acord, decret, etc.) talk about a politician that belongs to an specific party.
 It can be seen, for example, that PSC has a higher influence among "Decret" hile CIU hat a greater impact on "Edicte".
+
+
+4. **Graph 4** Sankey:
 
 Finally we have done a fast visualization using a Sankey diagram that relates each politician with each topic. The links show how much each politician is appearing in documents from each topic.
 
