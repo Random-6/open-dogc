@@ -54,7 +54,7 @@ These documents were ranked by relevancy prior to their download.
 The result of this first step is a mongoDB that contains all the scrapped information. For each document there is a row indexed by the author and the date, with a column for the whole text and columns with the metadata explained before.
 
 
-## 2. Data processing and cluster using LDA 👥
+## 2. Data processing, cluster using LDA and multi-class classifier 👥
 
 The data analysis of this project is based on the clusterisation of all documents using an unsupervised machine learning model.
 Clustering all documents will put together those ones that discuss about similar topics or are defined in a similar way. Once we have the clusters, we can then perform some studies about the participation of each party in each cluster and how they relate.
@@ -111,4 +111,23 @@ Concretely, the 5 topics were classified as:
 |   Topic 3  	|  Legal matters      	|
 |   Topic 4  	|   Media and audiovisual      	|
 
-However, now a question arises: Are these words really useful for topic classification?
+
+
+### 2.3 Multi-class classification model
+
+Once we have created our own clusters, we can characterize them using the most frequent words on each topic. In our case, we have selected the top 10 words for each topic.
+
+Once we have them, we can use a machine learning multi-class model to verify that the presence of this words in a given text is enough to classify that specific text into a topic.
+
+This is what is done in the scripts/2. model/ML Model OpenDogc.
+
+We have changed our matrix to a new one, this time the dictionary has been created using the top-10 words for each topic. However, instead of doing a count of each word, we just take into account if the word can be found in the text or not (binary matrix).
+
+Once this is done, we split the dataset into train and test set (80-20 parity) and we apply a multi-class classification model, in order to find out the topics label.
+We have compared two different algorithm (LinearSVC and LogisticRegression) and we have used the OneVsRestClassifier strategy (which means we create an specific model for each class or topic -positive label- and we label the rest of classes/topics as negative).
+
+The results show an accuracy above 0.9 for both models on the test set, being the LinearSVC slightly better.
+
+This new model can now be applied to new scrapped text and allow us to do some studies relating content, politicians, parties and topics.
+
+## 3. Analysis and visualisation
